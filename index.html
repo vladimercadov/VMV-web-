@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VMV - Asistencia Virtual & IA</title>
+    
+    <!-- Tidio Chat -->
+    <script src="//code.tidio.co/vemgz5up7qlftbqultrqyjakg4zb3rs3.js" async></script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cyber: {
+                dark: '#050a14',
+                blue: '#00d2ff',
+                purple: '#b700ff',
+                card: '#111827',
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- Polyfill e Import Map para React y Lucide -->
+    <script async src="https://ga.jspm.io/npm:es-module-shims@1.10.1/dist/es-module-shims.js"></script>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "lucide-react": "https://esm.sh/lucide-react@0.460.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+
+    <!-- Babel para procesar JSX en el navegador -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap');
+      body {
+        font-family: 'Rajdhani', sans-serif;
+        background-color: #02040a;
+        color: white;
+        margin: 0;
+        overflow-x: hidden;
+      }
+      .mask-image-gradient {
+        mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+      }
+      /* Animación simple para el fondo */
+      @keyframes pulse-glow {
+        0%, 100% { opacity: 0.5; }
+        50% { opacity: 0.8; }
+      }
+      .animate-glow { animation: pulse-glow 4s infinite ease-in-out; }
+    </style>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <!-- Cargamos todo desde un solo archivo para evitar 404s en GitHub -->
+    <script type="text/babel" data-type="module" src="index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
